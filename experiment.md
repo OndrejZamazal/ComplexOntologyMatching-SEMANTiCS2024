@@ -20,18 +20,19 @@ SELECT DISTINCT ?class1 ?property1 ?class2 ?ent1
 	WHERE { 
 		?property1 rdfs:domain ?ent1 .
 		?property1 rdfs:range ?class1 .
-		?class2 rdfs:subClassOf ?class1 } 
+		?class2 rdfs:subClassOf ?class1 
+	} 
 ``` 
 
 SPARQL query2 for O2: 
 ```
 SELECT DISTINCT ?class1 ?ent1
 
- WHERE {
-
- ?class1 rdfs:subClassOf* ?ent1
-
- }
+	 WHERE {
+	
+	 	?class1 rdfs:subClassOf* ?ent1
+	
+	 }
 ```
 
 From input_alignment:
