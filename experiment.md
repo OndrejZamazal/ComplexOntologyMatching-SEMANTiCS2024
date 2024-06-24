@@ -675,7 +675,7 @@ In Manchester OWL syntax:
 ```
 
 
-Meta-reviewer is not only the author of the review but (s)he has a specific role within a reviewing process. Meta-reviewer is rather a subclass of an author of review. Considering it as a false positive example.
+Meta-reviewer is not only the author of the review but (s)he has a specific role within a reviewing process. Meta-reviewer is rather a subclass of an author of review. Considering it as a false positive example. However, within some scenarios, this subsumption could also help with interoperability.
 
 In all, we have
 - 6 partly true positive
