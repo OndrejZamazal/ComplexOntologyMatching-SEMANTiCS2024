@@ -684,7 +684,7 @@ In all, we have
 - 1 true positive
 - 6 partly false positives
 
-Considering only equivalence precision equals 0.125 (1/8). However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI (General Concept Inclusion) axioms (false positives lead to GCI axioms) are allowed, $P_r$=1.0. If GCI axioms are not allowed, $P_r$=0.25.
+Considering only equivalence precision equals 0.125 (1/8). However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI (General Concept Inclusion) axioms (partly false positives lead to GCI axioms) are allowed, $P_r$=1.0. If GCI axioms are not allowed, $P_r$=0.25.
 
 <!-- In our preliminary evaluation, we consider partly true positives useful for discovering complex correspondences (either equivalence or subsumption). Therefore, we use relaxed precision ($P_r$) as an evaluation metric: $P_r=7/8=0.875$. --> 
 
