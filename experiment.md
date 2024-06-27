@@ -617,7 +617,7 @@ In EDOAL syntax:
 ```
 
 
-Since some conferences call for abstracts, being an author can be merely based on authorship of abstract. However, it would be better to call such author as **abstract author**. We evaluate it as *partly true*. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of abstract).
+Since some conferences call for abstracts, being an author can be merely based on authorship of abstract. However, it would be better to call such author as **abstract author**. We evaluate it as *partly false positive*. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of abstract).
 
 
 ```
@@ -628,7 +628,7 @@ In Manchester OWL syntax:
 <http://cmt#Author> EquivalentTo <http://ekaw#Person> and (<http://ekaw#authorOf> some <http://ekaw#Multi-author_Volume>)
 ```
 
-It is similar to situation as before. Being an authors of multi-author volume means such a person is an author. However, it would be better to call such an author as **multi-author volume author**. We evaluate it as *partly true*. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of multi-author volume). 
+It is similar to situation as before. Being an authors of multi-author volume means such a person is an author. However, it would be better to call such an author as **multi-author volume author**. We evaluate it as *partly false positive*. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of multi-author volume). 
 
 ```
 3. Author is the same as person which is author of paper.
@@ -638,7 +638,7 @@ In Manchester OWL syntax:
 <http://cmt#Author> EquivalentTo <http://ekaw#Person> and (<http://ekaw#authorOf> some <http://ekaw#Paper>)
 ```
 
-This instance could be considered as true, however we could again consider it as *partly true*, since ideally it would be **paper author**. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of paper).
+This instance could be considered as true, however we could again consider it as *partly false positive*, since ideally it would be **paper author**. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of paper).
 
 ```
 4. Author not reviewer is the same as person which is author of abstract.
@@ -664,7 +664,7 @@ In Manchester OWL syntax:
 <http://cmt#Reviewer> EquivalentTo <http://ekaw#Person> and (<http://ekaw#authorOf> some <http://ekaw#Review>)
 ```
 
-Although, it is also debatable whether being an author of review is enough for being a real reviewer, we think it is close enough. We consider this as an true example.
+Although, it is also debatable whether being an author of review is enough for being a real reviewer, we think it is close enough. We consider this as an true positive.
 
 ```
 8. Meta-reviewer is the same as person which is author of review.
@@ -675,14 +675,18 @@ In Manchester OWL syntax:
 ```
 
 
-Meta-reviewer is not only the author of the review but (s)he has a specific role within a reviewing process. Meta-reviewer is rather a subclass of an author of review. Considering it as a false positive example. However, within some scenarios, this subsumption could also help with interoperability.
+Meta-reviewer is not only the author of the review but (s)he has a specific role within a reviewing process. Meta-reviewer is rather a subclass of an author of review. Considering it as a **partly true positive**. 
+
+<!-- within some scenarios, this subsumption could also help with interoperability. -->
 
 In all, we have
-- 6 partly true positive
+- 1 partly true positive
 - 1 true positive
-- 1 false positive
+- 6 partly false positives
 
-In our preliminary evaluation, we consider partly true positives useful for discovering complex correspondences (either equivalence or subsumption). Therefore, we use relaxed precision ($P_r$) as an evaluation metric: $P_r=7/8=0.875$. 
+Considering only equivalence precision equals 0.125 (1/8). However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI (General Concept Inclusion) axioms (false positives lead to GCI axioms) are allowed, $P_r$=1.0. If GCI axioms are not allowed, $P_r$=0.25.
+
+<!-- In our preliminary evaluation, we consider partly true positives useful for discovering complex correspondences (either equivalence or subsumption). Therefore, we use relaxed precision ($P_r$) as an evaluation metric: $P_r=7/8=0.875$. --> 
 
 <!-- LLM did not miss any complex correspondence, recall is 1.0. -->
 
