@@ -334,7 +334,10 @@ Prompt for GPT-4o, https://chat.openai.com/, is the following, setting 1 - no co
 NOTE In the prompt use used labels: true, probably true, probably false, false which correspond to positive, probably positive, probably negative, negative, respectively in the poster paper Experiment and Preliminary Evaluation section.
 
 ```
-Could you please judge whether the following sentences are true or false. Please prepare the table where in the first column there is the sentence, the second column has your judge true or false, the third column has your judge true, probably true, probably false, false.
+Could you please judge whether the following sentences are true or false.
+Please prepare the table where in the first column there is the sentence,
+the second column has your judge true or false, the third column has your
+judge true, probably true, probably false, false.
 
 Paper abstract is the same as paper which has review positive review.
 Paper abstract is the same as paper which has review neutral review.
@@ -617,7 +620,7 @@ In EDOAL syntax:
 ```
 
 
-Since some conferences call for abstracts, being an author can be merely based on authorship of abstract. However, it would be better to call such author as **abstract author**. We evaluate it as *partly false positive*. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of abstract).
+Since some conferences call for abstracts, being an author can be merely based on authorship of abstract. However, it would be better to call such author as **abstract author**. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of abstract). We evaluate it as *partly false positive*.
 
 
 ```
@@ -628,7 +631,7 @@ In Manchester OWL syntax:
 <http://cmt#Author> EquivalentTo <http://ekaw#Person> and (<http://ekaw#authorOf> some <http://ekaw#Multi-author_Volume>)
 ```
 
-It is similar to situation as before. Being an authors of multi-author volume means such a person is an author. However, it would be better to call such an author as **multi-author volume author**. We evaluate it as *partly false positive*. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of multi-author volume). 
+It is similar to situation as before. Being an authors of multi-author volume means such a person is an author. However, it would be better to call such an author as **multi-author volume author**. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of multi-author volume). We evaluate it as *partly false positive*.
 
 ```
 3. Author is the same as person which is author of paper.
