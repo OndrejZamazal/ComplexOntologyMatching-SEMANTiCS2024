@@ -620,7 +620,7 @@ In EDOAL syntax:
 ```
 
 
-Since some conferences call for abstracts, being an author can be merely based on authorship of abstract. However, it would be better to call such author as **abstract author**. Subsumption relation would be more fitting (i.e. Author subsumes person which is author of abstract). We evaluate it as *partly false positive*.
+Since some conferences call for abstracts, being an author can be merely based on authorship of abstract. However, it would be better to call such author as **abstract author**. The subsumption relation would be more fitting (i.e., Author subsumes person which is author of abstract). Since it leads to General Concept Inclusion (GCI) subsumption being not always allowed, we evaluate it as *partly false positive*.
 
 
 ```
@@ -678,7 +678,7 @@ In Manchester OWL syntax:
 ```
 
 
-Meta-reviewer is not only the author of the review but (s)he has a specific role within a reviewing process. Meta-reviewer is rather a subclass of an author of review. Considering it as a *partly true positive*. 
+Meta-reviewer is not only the author of the review but (s)he has a specific role within a reviewing process. A meta-reviewer is instead a subclass of person which is an author of review, i.e., Class $\sqsubseteq$ Class Expression. Considering it as a *partly true positive*. 
 
 <!-- within some scenarios, this subsumption could also help with interoperability. -->
 
