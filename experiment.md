@@ -620,7 +620,7 @@ In EDOAL syntax:
 ```
 
 
-Since some conferences call for abstracts, being an author can be merely based on authorship of abstract. However, it would be better to call such author as **abstract author**. The subsumption relation would be more fitting (i.e., Author subsumes person which is author of abstract). Since it leads to General Concept Inclusion (GCI) subsumption being not always allowed, we evaluate it as *partly false positive*.
+Since some conferences call for abstracts, being an author can be merely based on abstract authorship. However, it would be better to call such author as **abstract author**. However, the subsumption relation would be more fitting (i.e., Author subsumes person which is author of abstract). Since it leads to General Concept Inclusion (GCI) subsumption, i.e., Class $\sqsupseteq$ Class Expression, being not always allowed, it was evaluated as *partly false positive*.
 
 
 ```
@@ -667,7 +667,7 @@ In Manchester OWL syntax:
 <http://cmt#Reviewer> EquivalentTo <http://ekaw#Person> and (<http://ekaw#authorOf> some <http://ekaw#Review>)
 ```
 
-Although, it is also debatable whether being an author of review is enough for being a real reviewer, we think it is close enough. We consider this as an true positive.
+Although, it is also debatable whether being an author of review is enough for being a real reviewer, we think it is close enough. We consider this as a *true positive*.
 
 ```
 8. Meta-reviewer is the same as person which is author of review.
@@ -683,11 +683,11 @@ Meta-reviewer is not only the author of the review but (s)he has a specific role
 <!-- within some scenarios, this subsumption could also help with interoperability. -->
 
 In all, we have
-- 1 partly true positive
 - 1 true positive
+- 1 partly true positive
 - 6 partly false positives
 
-Considering only equivalence precision equals 0.125 (1/8). However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI (General Concept Inclusion) axioms (partly false positives lead to GCI axioms) are allowed, $P_r$=1.0. If GCI axioms are not allowed, $P_r$=0.25.
+Considering only equivalence precision equals $\frac{1}{8}=0.125$. However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI axioms (partly false positives) are not allowed, $P_r=\frac{2}{8}=0.25$. If GCI axioms are allowed, $P_r=1.0$.
 
 <!-- In our preliminary evaluation, we consider partly true positives useful for discovering complex correspondences (either equivalence or subsumption). Therefore, we use relaxed precision ($P_r$) as an evaluation metric: $P_r=7/8=0.875$. --> 
 
