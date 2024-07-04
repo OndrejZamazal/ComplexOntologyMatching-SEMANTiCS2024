@@ -4,7 +4,7 @@
 Input: 
 - O1=https://oaei.ontologymatching.org/2024/conference/data/ekaw.owl 
 - O2=https://oaei.ontologymatching.org/2024/conference/data/cmt.owl, 
-- input_alignemnt = https://oaei.ontologymatching.org/2024/conference/data/subset1-cmt-ekaw.owl; {O1:Paper=O2:Paper; O1:Person=O2:Person}
+- input_alignemnt = [https://oaei.ontologymatching.org/2024/conference/data/subset1-cmt-ekaw.owl](https://oaei.ontologymatching.org/2024/conference/data/subset1-cmt-ekaw.rdf); {O1:Paper=O2:Paper; O1:Person=O2:Person}
 - *Class by Attribute Type* (CAT) alignment pattern from [Scharffe09](https://scholar.google.com/scholar_url?url=https://www.academia.edu/download/30806287/manuscript.pdf&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=621239557845776854&ei=9Ut1Zvj6B6aty9YP54e9kAc&scisig=AFWwaeZPfF1N_zmYFPxB4qOSuqY8): this pattern specifies equivalence between a class in O1 and a class in O2 restricted on its scope using existential restriction; in Manchester OWL syntax: *O1:Class1 EquivalentTo O2:Class1 and (O2:property some O2:Class2)*.
 
 
