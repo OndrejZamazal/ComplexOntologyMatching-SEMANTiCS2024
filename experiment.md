@@ -595,7 +595,7 @@ In Manchester OWL syntax:
 ```
 <http://cmt#Author> EquivalentTo <http://ekaw#Person> and (<http://ekaw#authorOf> some <http://ekaw#Abstract>)
 ```
-In EDOAL syntax:
+In [EDOAL syntax](https://moex.gitlabpages.inria.fr/alignapi/edoal.html):
 ```
 <map>
   <Cell rdf:about="Author1">
