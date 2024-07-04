@@ -1,5 +1,7 @@
 # Supplementary material (SEMANTiCS 2024 poster paper) for experiments
 
+**NOTE**: Contrary to the submission poster paper, ontology variables (O1, O2) are swapped here. Otherwise, the example is the same.
+
 ## Input
 Input: 
 - O1=https://oaei.ontologymatching.org/2024/conference/data/ekaw.owl
