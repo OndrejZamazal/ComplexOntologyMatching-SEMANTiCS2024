@@ -583,9 +583,9 @@ In all, there were
 - 14 false sentences (negatives)
 - 74 probably false sentences (probably negatives)
 - 10 probably true sentences (partly positives)
-- 8 true sentences (positives), where we considered true sentences as those suggested complex correspondences by LLM. 
+- 8 true sentences (positives), where we considered true sentences as those complex correspondence candidates by LLM. 
 
-We evaluate eight suggested complex correspondences in terms of precision (true, partly true, false):
+We evaluated all eight complex correspondence candidates in terms of precision (true positive, partly true positive, partly false positive, false positive):
 
 
 ```
@@ -686,6 +686,7 @@ In all, we have
 - 1 true positive
 - 1 partly true positive
 - 6 partly false positives
+- 0 false positive
 
 Considering only equivalence precision equals $\frac{1}{8}=0.125$. However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI axioms (partly false positives) are not allowed, $P_r=\frac{2}{8}=0.25$. If GCI axioms are allowed, $P_r=1.0$.
 
