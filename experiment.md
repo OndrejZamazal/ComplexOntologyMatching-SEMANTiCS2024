@@ -692,7 +692,7 @@ In all, we have
 - 6 partly false positives
 - 0 false positive
 
-Considering only equivalence precision equals $\frac{1}{8}=0.125$. However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI axioms (partly false positives) are not allowed, $P_r=\frac{2}{8}=0.25$. If GCI axioms are allowed, $P_r=1.0$.
+Considering only equivalence precision equals $\frac{1}{8}=0.125$. However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI axioms (partly false positives) are not allowed, $P_r=\frac{2}{8}=0.25$. If GCI axioms are allowed (GCI subsumptions could also help with interoperability within some scenarios), $P_r=1.0$.
 
 Preliminary consideration of recall shows that all negatives labeled by LLM are true negatives. However, further evaluation is needed regarding relaxed recall, which certainly decreases its figure.
 
