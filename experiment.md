@@ -84,6 +84,7 @@ SPARQL results for SPARQL query2 for O2:
 Results from detecting both ontologies are joined according to the alignment pattern separately per each input correspondence.
 
 ```
+(for the first input correspondence;Paper=Paper)
 O2:class1=<http://cmt#PaperAbstract>==O1:ent1=<http://ekaw#Paper>;O1:property1=<http://ekaw#hasReview>;O1:class2=<http://ekaw#Positive_Review>
 O2:class1=<http://cmt#PaperAbstract>==O1:ent1=<http://ekaw#Paper>;O1:property1=<http://ekaw#hasReview>;O1:class2=<http://ekaw#Neutral_Review>
 O2:class1=<http://cmt#PaperAbstract>==O1:ent1=<http://ekaw#Paper>;O1:property1=<http://ekaw#hasReview>;O1:class2=<http://ekaw#Negative_Review>
@@ -93,6 +94,7 @@ O2:class1=<http://cmt#PaperFullVersion>==O1:ent1=<http://ekaw#Paper>;O1:property
 O2:class1=<http://cmt#PaperFullVersion>==O1:ent1=<http://ekaw#Paper>;O1:property1=<http://ekaw#hasReview>;O1:class2=<http://ekaw#Negative_Review>
 O2:class1=<http://cmt#PaperFullVersion>==O1:ent1=<http://ekaw#Paper>;O1:property1=<http://ekaw#hasReviewer>;O1:class2=<http://ekaw#PC_Member>
 
+(for the second input correspondence;Person=Person)
 O2:class1=<http://cmt#ProgramCommitteeMember>==O1:ent1=<http://ekaw#Person>;O1:property1=<http://ekaw#authorOf>;O1:class2=<http://ekaw#Abstract>
 O2:class1=<http://cmt#ProgramCommitteeMember>==O1:ent1=<http://ekaw#Person>;O1:property1=<http://ekaw#authorOf>;O1:class2=<http://ekaw#Review>
 O2:class1=<http://cmt#ProgramCommitteeMember>==O1:ent1=<http://ekaw#Person>;O1:property1=<http://ekaw#authorOf>;O1:class2=<http://ekaw#Multi-author_Volume>
