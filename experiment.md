@@ -689,6 +689,8 @@ In all, we have
 
 Considering only equivalence precision equals $\frac{1}{8}=0.125$. However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI axioms (partly false positives) are not allowed, $P_r=\frac{2}{8}=0.25$. If GCI axioms are allowed, $P_r=1.0$.
 
+Preliminary consideration of recall shows that all negatives labeled by LLM are true negatives. However, further evaluation is needed regarding relaxed recall, which certainly decreases its figure.
+
 <!-- In our preliminary evaluation, we consider partly true positives useful for discovering complex correspondences (either equivalence or subsumption). Therefore, we use relaxed precision ($P_r$) as an evaluation metric: $P_r=7/8=0.875$. --> 
 
 <!-- LLM did not miss any complex correspondence, recall is 1.0. -->
