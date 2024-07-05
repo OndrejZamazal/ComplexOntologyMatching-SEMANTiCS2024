@@ -1,4 +1,4 @@
-# Supplementary material (SEMANTiCS 2024 poster paper) for experiments
+# Supplementary material (SEMANTiCS 2024 poster paper) for preliminary experiments
 
 **NOTE**: Contrary to the submission poster paper, ontology variables (O1, O2) are swapped here. Otherwise, the example is the same.
 
@@ -588,6 +588,8 @@ In all, there were
 - 74 probably false sentences/candidates (probably negatives)
 - 10 probably true sentences/candidates (partly positives)
 - 8 true sentences/candidates (positives), where we considered true sentences as those complex correspondence candidates by LLM. 
+
+#### Evaluation regarding precision
 
 We evaluated all eight complex correspondence candidates in terms of precision (true positive, partly true positive, partly false positive, false positive):
 
