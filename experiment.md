@@ -696,7 +696,7 @@ In all, we have
 
 Considering only equivalence precision equals $\frac{1}{8}=0.125$. However, subsumption is also important for interoperability, meaning relaxed precision ($P_r$) could be used. If GCI axioms (partly false positives) are not allowed, $P_r=\frac{2}{8}=0.25$. If GCI axioms are allowed (GCI subsumptions could also help with interoperability within some scenarios), $P_r=1.0$.
 
-Preliminary consideration of recall shows that all negatives labeled by LLM are true negatives. However, further evaluation is needed regarding relaxed recall, which certainly decreases its figure.
+Preliminary consideration of recall (only equivalence relationship) shows that all negatives labeled by LLM are true negatives, i.e., R=1.0. However, further evaluation is needed regarding relaxed recall (subsumption relationships, too), which certainly decreases its figure.
 
 #### Preliminary evaluation regarding recall
 
@@ -740,13 +740,13 @@ Preliminary consideration of recall shows that all negatives labeled by LLM are 
 | Conference chair is the same as person which is author of programme brochure.| Probably False  | True negative                    |
 | Conference chair is the same as person which is author of flyer.         | Probably False         | True negative                                |
 | Conference chair is the same as person which is author of paper.         | Probably False         | True negative                                |
-| **Author is the same as person which is author of abstract**.                | **True**          | (not negative)                                          |
+| **Author is the same as person which is author of abstract**.                | **True**          | (not negative by LLM)                                          |
 | Author is the same as person which is author of review.                  | Probably False         | True negative                                |
-| **Author is the same as person which is author of multi-author volume.**     | **True**          | (not negative)                                          |
+| **Author is the same as person which is author of multi-author volume.**     | **True**          | (not negative by LLM)                                          |
 | Author is the same as person which is author of web site.                | Probably False         | True negative                                |
 | Author is the same as person which is author of programme brochure.      | Probably False         | True negative                                |
 | Author is the same as person which is author of flyer.                   | Probably False         | True negative                                |
-| **Author is the same as person which is author of paper.**                   | **True**          | (not negative)                                          |
+| **Author is the same as person which is author of paper.**                   | **True**          | (not negative by LLM)                                          |
 | Co-author is the same as person which is author of abstract.             | Probably True          | True negative                                |
 | Co-author is the same as person which is author of review.               | Probably False         | True negative                                |
 | Co-author is the same as person which is author of multi-author volume.  | Probably True          | True negative                                 |
@@ -754,22 +754,22 @@ Preliminary consideration of recall shows that all negatives labeled by LLM are 
 | Co-author is the same as person which is author of programme brochure.   | Probably False         | True negative                                |
 | Co-author is the same as person which is author of flyer.                | Probably False         | True negative                                |
 | Co-author is the same as person which is author of paper.                | Probably True          | True negative                                 |
-| **Author not reviewer is the same as person which is author of abstract.**   | **True**          | (not negative)                                          |
+| **Author not reviewer is the same as person which is author of abstract.**   | **True**          | (not negative by LLM)                                          |
 | Author not reviewer is the same as person which is author of review.     | False         | True negative                                         |
-| **Author not reviewer is the same as person which is author of multi-author volume.**| **True**  | (not negative)                              |
+| **Author not reviewer is the same as person which is author of multi-author volume.**| **True**  | (not negative by LLM)                              |
 | Author not reviewer is the same as person which is author of web site.   | Probably False         | True negative                                |
 | Author not reviewer is the same as person which is author of programme brochure.| Probably False | True negative                     |
 | Author not reviewer is the same as person which is author of flyer.      | Probably False         | True negative                                |
-| **Author not reviewer is the same as person which is author of paper.**      | **True**          | (not negative)                                          |
+| **Author not reviewer is the same as person which is author of paper.**      | **True**          | (not negative by LLM)                                          |
 | Reviewer is the same as person which is author of abstract.              | False         | True negative                                         |
-| **Reviewer is the same as person which is author of review.**             | **True**          | **True**                                          |
+| **Reviewer is the same as person which is author of review.**             | **True**          | (not negative by LLM)                                          |
 | Reviewer is the same as person which is author of multi-author volume.   | Probably False         | True negative                                |
 | Reviewer is the same as person which is author of web site.              | Probably False         | True negative                                |
 | Reviewer is the same as person which is author of programme brochure.    | Probably False         | True negative                                |
 | Reviewer is the same as person which is author of flyer.                 | Probably False         | True negative                                |
 | Reviewer is the same as person which is author of paper.                 | Probably False         | True negative                                |
 | Meta-reviewer is the same as person which is author of abstract.         | Probably False         | True negative                                         |
-| **Meta-reviewer is the same as person which is author of review.**      | **True**          | (not negative)                                          |
+| **Meta-reviewer is the same as person which is author of review.**      | **True**          | (not negative by LLM)                                          |
 | Meta-reviewer is the same as person which is author of multi-author volume.| Probably False     | True negative                                |
 | Meta-reviewer is the same as person which is author of web site.         | Probably False         | True negative                                |
 | Meta-reviewer is the same as person which is author of programme brochure.| Probably False    | True negative                                |
