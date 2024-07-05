@@ -574,7 +574,7 @@ The evaluation is based on common understanding and relationships in academic an
 
 ### The evaluation
 
-We asked LLM to decide whether the sentences are TRUE, PROBABLY TRUE, PROBABLY FALSE, FALSE. 
+We asked LLM to decide whether the sentences (candidates) are TRUE, PROBABLY TRUE, PROBABLY FALSE, FALSE. 
 
 <!-- TRUE or FALSE and in more detailed granularity -->
 
@@ -584,10 +584,10 @@ We asked LLM to decide whether the sentences are TRUE, PROBABLY TRUE, PROBABLY F
 
 <!-- In finer judgement there were -->
 In all, there were
-- 14 false sentences (negatives)
-- 74 probably false sentences (probably negatives)
-- 10 probably true sentences (partly positives)
-- 8 true sentences (positives), where we considered true sentences as those complex correspondence candidates by LLM. 
+- 14 false sentences/candidates (negatives)
+- 74 probably false sentences/candidates (probably negatives)
+- 10 probably true sentences/candidates (partly positives)
+- 8 true sentences/candidates (positives), where we considered true sentences as those complex correspondence candidates by LLM. 
 
 We evaluated all eight complex correspondence candidates in terms of precision (true positive, partly true positive, partly false positive, false positive):
 
