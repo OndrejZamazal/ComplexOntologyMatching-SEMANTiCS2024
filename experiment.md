@@ -696,6 +696,120 @@ Considering only equivalence precision equals $\frac{1}{8}=0.125$. However, subs
 
 Preliminary consideration of recall shows that all negatives labeled by LLM are true negatives. However, further evaluation is needed regarding relaxed recall, which certainly decreases its figure.
 
+#### Preliminary evaluation regarding recall
+
+**NOTE** The following table contains validation by LLM (Judgement column) and evaluation by human (true negative/ false negative in the Evaluation column) for negatives (here, everything except True labeled by LLM is considered as negative). In near future, we will also consider higher granularity for evaluation of negatives (partly true, partly false etc.).
+
+| Sentence                                                                 | Judgment (by LLM)| Evaluation (by human)                      |
+|--------------------------------------------------------------------------|---------------|-----------------------------------------------|
+| Paper abstract is the same as paper which has review positive review.    | False         | True negative                                 |
+| Paper abstract is the same as paper which has review neutral review.     | False         | True negative                                         |
+| Paper abstract is the same as paper which has review negative review.    | False         | True negative                                         |
+| Paper abstract is the same as paper which has reviewer pc member.        | False         | True negative                                         |
+| Paper full version is the same as paper which has review positive review.| False         | True negative                                         |
+| Paper full version is the same as paper which has review neutral review. | False         | True negative                                         |
+| Paper full version is the same as paper which has review negative review.| False         | True negative                                         |
+| Paper full version is the same as paper which has reviewer pc member.    | False         | True negative                                         |
+| Program committee member is the same as person which is author of abstract.| False       | True negative                                         |
+| Program committee member is the same as person which is author of review.| Probably True          | True negative                                 |
+| Program committee member is the same as person which is author of multi-author volume.| Probably False | True negative                      |
+| Program committee member is the same as person which is author of web site.| Probably False      | True negative                                |
+| Program committee member is the same as person which is author of programme brochure.| Probably False | True negative                |
+| Program committee member is the same as person which is author of flyer. | Probably False         | True negative                                |
+| Program committee member is the same as person which is author of paper. | Probably False         | True negative                                |
+| Program committee chair is the same as person which is author of abstract.| False       | True negative                                         |
+| Program committee chair is the same as person which is author of review. | Probably True          | True negative                                 |
+| Program committee chair is the same as person which is author of multi-author volume.| Probably False | True negative                     |
+| Program committee chair is the same as person which is author of web site.| Probably False      | True negative                                |
+| Program committee chair is the same as person which is author of programme brochure.| Probably False | True negative                |
+| Program committee chair is the same as person which is author of flyer.  | Probably False         | True negative                                |
+| Program committee chair is the same as person which is author of paper.  | Probably False         | True negative                                |
+| Conference member is the same as person which is author of abstract.     | Probably False         | True negative                                |
+| Conference member is the same as person which is author of review.       | Probably False          | True negative                                 |
+| Conference member is the same as person which is author of multi-author volume.| Probably False  | True negative                     |
+| Conference member is the same as person which is author of web site.     | Probably False         | True negative                                |
+| Conference member is the same as person which is author of programme brochure.| Probably False  | True negative                    |
+| Conference member is the same as person which is author of flyer.        | Probably False         | True negative                                |
+| Conference member is the same as person which is author of paper.        | Probably False         | True negative                                |
+| Conference chair is the same as person which is author of abstract.      | Probably False         | True negative                                |
+| Conference chair is the same as person which is author of review.        | Probably True          | True negative                                 |
+| Conference chair is the same as person which is author of multi-author volume.| Probably False  | True negative                     |
+| Conference chair is the same as person which is author of web site.      | Probably False         | True negative                                |
+| Conference chair is the same as person which is author of programme brochure.| Probably False  | True negative                    |
+| Conference chair is the same as person which is author of flyer.         | Probably False         | True negative                                |
+| Conference chair is the same as person which is author of paper.         | Probably False         | True negative                                |
+| **Author is the same as person which is author of abstract**.                | **True**          | (not negative)                                          |
+| Author is the same as person which is author of review.                  | Probably False         | True negative                                |
+| **Author is the same as person which is author of multi-author volume.**     | **True**          | (not negative)                                          |
+| Author is the same as person which is author of web site.                | Probably False         | True negative                                |
+| Author is the same as person which is author of programme brochure.      | Probably False         | True negative                                |
+| Author is the same as person which is author of flyer.                   | Probably False         | True negative                                |
+| **Author is the same as person which is author of paper.**                   | **True**          | (not negative)                                          |
+| Co-author is the same as person which is author of abstract.             | Probably True          | True negative                                |
+| Co-author is the same as person which is author of review.               | Probably False         | True negative                                |
+| Co-author is the same as person which is author of multi-author volume.  | Probably True          | True negative                                 |
+| Co-author is the same as person which is author of web site.             | Probably False         | True negative                                |
+| Co-author is the same as person which is author of programme brochure.   | Probably False         | True negative                                |
+| Co-author is the same as person which is author of flyer.                | Probably False         | True negative                                |
+| Co-author is the same as person which is author of paper.                | Probably True          | True negative                                 |
+| **Author not reviewer is the same as person which is author of abstract.**   | **True**          | (not negative)                                          |
+| Author not reviewer is the same as person which is author of review.     | False         | True negative                                         |
+| **Author not reviewer is the same as person which is author of multi-author volume.**| **True**  | (not negative)                              |
+| Author not reviewer is the same as person which is author of web site.   | Probably False         | True negative                                |
+| Author not reviewer is the same as person which is author of programme brochure.| Probably False | True negative                     |
+| Author not reviewer is the same as person which is author of flyer.      | Probably False         | True negative                                |
+| **Author not reviewer is the same as person which is author of paper.**      | **True**          | (not negative)                                          |
+| Reviewer is the same as person which is author of abstract.              | False         | True negative                                         |
+| **Reviewer is the same as person which is author of review.**             | **True**          | **True**                                          |
+| Reviewer is the same as person which is author of multi-author volume.   | Probably False         | True negative                                |
+| Reviewer is the same as person which is author of web site.              | Probably False         | True negative                                |
+| Reviewer is the same as person which is author of programme brochure.    | Probably False         | True negative                                |
+| Reviewer is the same as person which is author of flyer.                 | Probably False         | True negative                                |
+| Reviewer is the same as person which is author of paper.                 | Probably False         | True negative                                |
+| Meta-reviewer is the same as person which is author of abstract.         | Probably False         | True negative                                         |
+| **Meta-reviewer is the same as person which is author of review.**      | **True**          | (not negative)                                          |
+| Meta-reviewer is the same as person which is author of multi-author volume.| Probably False     | True negative                                |
+| Meta-reviewer is the same as person which is author of web site.         | Probably False         | True negative                                |
+| Meta-reviewer is the same as person which is author of programme brochure.| Probably False    | True negative                                |
+| Meta-reviewer is the same as person which is author of flyer.            | Probably False         | True negative                                |
+| Meta-reviewer is the same as person which is author of paper.            | Probably False         | True negative                                |
+| Associated chair is the same as person which is author of abstract.      | Probably False         | True negative                                |
+| Associated chair is the same as person which is author of review.        | Probably True          | True negative                                 |
+| Associated chair is the same as person which is author of multi-author volume.| Probably False  | True negative                     |
+| Associated chair is the same as person which is author of web site.      | Probably False         | True negative                                |
+| Associated chair is the same as person which is author of programme brochure.| Probably False  | True negative                    |
+| Associated chair is the same as person which is author of flyer.         | Probably False         | True negative                                |
+| Associated chair is the same as person which is author of paper.         | Probably False         | True negative                                |
+| External reviewer is the same as person which is author of abstract.     | False         | True negative                                         |
+| External reviewer is the same as person which is author of review.       | Probably True          | True negative                                 |
+| External reviewer is the same as person which is author of multi-author volume.| Probably False | True negative                     |
+| External reviewer is the same as person which is author of web site.     | Probably False         | True negative                                |
+| External reviewer is the same as person which is author of programme brochure.| Probably False  | True negative                    |
+| External reviewer is the same as person which is author of flyer.        | Probably False         | True negative                                |
+| External reviewer is the same as person which is author of paper.        | Probably False         | True negative                                |
+| Chairman is the same as person which is author of abstract.              | Probably False         | True negative                                |
+| Chairman is the same as person which is author of review.                | Probably True          | True negative                                 |
+| Chairman is the same as person which is author of multi-author volume.   | Probably False         | True negative                                |
+| Chairman is the same as person which is author of web site.              | Probably False         | True negative                                |
+| Chairman is the same as person which is author of programme brochure.    | Probably False         | True negative                                |
+| Chairman is the same as person which is author of flyer.                 | Probably False         | True negative                                |
+| Chairman is the same as person which is author of paper.                 | Probably False         | True negative                                |
+| User is the same as person which is author of abstract.                  | Probably False         | True negative                                |
+| User is the same as person which is author of review.                    | Probably False         | True negative                                |
+| User is the same as person which is author of multi-author volume.       | Probably False         | True negative                                |
+| User is the same as person which is author of web site.                  | Probably False         | True negative                                |
+| User is the same as person which is author of programme brochure.        | Probably False         | True negative                                |
+| User is the same as person which is author of flyer.                     | Probably False         | True negative                                |
+| User is the same as person which is author of paper.                     | Probably False         | True negative                                |
+| Administrator is the same as person which is author of abstract.         | Probably False         | True negative                                |
+| Administrator is the same as person which is author of review.           | Probably False         | True negative                                |
+| Administrator is the same as person which is author of multi-author volume.| Probably False     | True negative                                |
+| Administrator is the same as person which is author of web site.         | Probably False         | True negative                                |
+| Administrator is the same as person which is author of programme brochure.| Probably False     | True negative                                |
+| Administrator is the same as person which is author of flyer.            | Probably False         | True negative                                |
+| Administrator is the same as person which is author of paper.            | Probably False         | True negative                                |
+
+
 <!-- In our preliminary evaluation, we consider partly true positives useful for discovering complex correspondences (either equivalence or subsumption). Therefore, we use relaxed precision ($P_r$) as an evaluation metric: $P_r=7/8=0.875$. --> 
 
 <!-- LLM did not miss any complex correspondence, recall is 1.0. -->
